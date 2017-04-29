@@ -5,7 +5,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../../ui/layouts/body/body.js';
 import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
-import '../../ui/pages/player/player.js';
+import '../../ui/pages/app/app.js';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
@@ -18,7 +18,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/player', {
   name: 'App.player',
   action() {
-    BlazeLayout.render('App_body', { main: 'App_player' });
+    BlazeLayout.render('App_body', { main: 'App_app' });
   },
 });
 
