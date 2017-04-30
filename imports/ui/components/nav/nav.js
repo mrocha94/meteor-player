@@ -1,8 +1,8 @@
 import './nav.html'
 
 Template.nav.onCreated(function(){
-  const playerInstance = this.view.parentView.templateInstance();
-  this.hidden = playerInstance.hidden;
+  const appInstance = this.view.parentView.templateInstance();
+  this.hidden = appInstance.hidden;
 });
 
 Template.nav.helpers({
