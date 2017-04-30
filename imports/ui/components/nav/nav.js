@@ -10,7 +10,10 @@ Template.nav.helpers({
     return Template.instance().navState.get();
   },
   navLinks(){
-    return [{text: "L"}, {text: "P"}];
+    return [{icon: "L", text: "Login"}, {icon: "P", text: "Playlist"}];
+  },
+  isMaximized(){
+    return (Template.instance().navState.get() === "maximized");
   }
 });
 

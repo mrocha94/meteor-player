@@ -2,7 +2,13 @@
   <div id="nav" class="nav {{navState}}">
     <ul>
       {{#each navLinks}}
-        <li>{{text}}</li>
+        <li>
+          {{#if isMaximized}}
+            {{text}}
+          {{else}}
+            {{icon}}
+          {{/if}}
+        </li>
       {{/each}}
     </ul>
   </div>
