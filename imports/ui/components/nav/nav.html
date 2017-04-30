@@ -3,10 +3,9 @@
     <ul>
       {{#each navLinks}}
         <li>
+          {{icon}}
           {{#if isMaximized}}
             {{text}}
-          {{else}}
-            {{icon}}
           {{/if}}
         </li>
       {{/each}}
