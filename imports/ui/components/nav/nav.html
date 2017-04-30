@@ -1,8 +1,9 @@
 <template name="nav">
   <div id="nav" class="nav {{navState}}">
     <ul>
-      <li>L</li>
-      <li>P</li>
+      {{#each navLinks}}
+        <li>{{text}}</li>
+      {{/each}}
     </ul>
   </div>
 </template>

@@ -9,6 +9,9 @@ Template.nav.helpers({
   navState(){
     return Template.instance().navState.get();
   },
+  navLinks(){
+    return [{text: "L"}, {text: "P"}];
+  }
 });
 
 Template.nav.events({
