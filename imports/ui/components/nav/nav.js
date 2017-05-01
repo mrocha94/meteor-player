@@ -13,7 +13,7 @@ Template.nav.helpers({
     return [{icon: "L", text: "Login"}, {icon: "P", text: "Playlist"}];
   },
   isMaximized(){
-    return (Template.instance().navState.get() === "maximized");
+    return (Template.instance().navState.get() === "maximized")
   }
 });
 

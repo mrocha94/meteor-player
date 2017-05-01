@@ -1,6 +1,10 @@
 <template name="player">
-  <video width="640" height="360" controls>
+  <video id="video-player" width="640" height="360" controls>
     <source src="/video/video.mp4" type="video/mp4" />
   </video>
-  <button style="margin-left: 200px;">Play</button>
+  <div class="player-controls">
+    <button id="play-pause-button" class="{{playPause}}" title="{{playPause}}">
+      {{playPause}}
+    </button>
+  </div>
 </template>
