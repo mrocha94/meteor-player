@@ -13,9 +13,8 @@ Template.player.helpers({
 });
 
 Template.player.events({
-  'click video'(event, instance) {
-    const hidden = instance.hidden.get();
-    instance.hidden.set(!hidden);
+  'ended #video-player'(event, instance) {
+    instance.playPause.set("play");
   },
   'click #play-pause-button'(event, instance) {
     const playPause = instance.playPause;
@@ -23,12 +22,21 @@ Template.player.events({
     const video = $("#video-player")[0];
     if (playPause.get() === "play") {
       playPause.set("pause");
-      navState.set("hidden");
       video.play();
     } else {
       playPause.set("play");
-      navState.set("minimized");
       video.pause();
     }
+    navState.set("minimized");
   },
+  'click #fullscreen-button'(event, instance) {
+    const video = $("#video-player")[0];
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    }
+  }
 });
