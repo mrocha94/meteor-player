@@ -30,7 +30,7 @@ Template.player.events({
     navState.set("minimized");
   },
   'click #fullscreen-button'(event, instance) {
-    const video = $("#video-player")[0];
+    const video = $("#player-container")[0];
     if (video.requestFullscreen) {
       video.requestFullscreen();
     } else if (video.mozRequestFullScreen) {

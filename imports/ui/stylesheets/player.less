@@ -1,9 +1,18 @@
-.player-overlay {
+#player-container {
   position: absolute;
   top: 0px;
   left: 0px;
   margin-left: 60px;
   width: ~"calc(100% - 60px)";
+  height: 100%;
+  background-color: black;
+}
+
+.player-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   height: 100%;
   color: white;
   background-color: #00000088;
@@ -22,8 +31,8 @@
 }
 
 #video-player {
-  margin-left: 60px;
-  width: ~"calc(100% - 60px)";
+  position: absolute;
+  width: 100%;
   height: 100%;
   z-index: 0;
 }
